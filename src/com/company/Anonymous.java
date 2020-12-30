@@ -26,8 +26,14 @@ public class Anonymous {
             }
         });
 
+        System.out.println(t1.getName());
+
         t1.start();
         Thread.sleep(10);
         t2.start();
+
+        t1.join();
+        t2.join();
+        System.out.println("bye");
     }
 }
